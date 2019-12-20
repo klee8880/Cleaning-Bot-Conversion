@@ -28,17 +28,13 @@ namespace Cleaning_Bot_Conversion.Robotics
         /**
          * incriment the battery capacity and return whether batter ins at capacity
          */
-        public void IncrimentBattery(float delta)
-        {
-            Battery += delta;
-        }
+        public void IncrimentBattery(float delta) => Battery += delta;
 
-        public void IncrimentDust(float delta)
-        {
-            Dust += delta;
-        }
+        public void IncrimentDust(float delta) => Dust += delta;
 
-        //public bool BatteryAtCapacity() = () => 
+        public bool BatteryAtCapacity() => Battery >= BATTERYCAPACITY;
+
+        public bool DustAtCapacity() => Dust >= DUSTCAPACITY;
 
     }
 }
