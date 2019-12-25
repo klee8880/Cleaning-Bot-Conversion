@@ -58,5 +58,15 @@ namespace Cleaning_Bot_Conversion.Navigation
             SouthSide = sS;
             WestSide = wS;
         }
+
+        public void RemoveDirt(Coordinates coords)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool HasObstacle(Direction dir)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
