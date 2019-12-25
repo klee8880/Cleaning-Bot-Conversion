@@ -4,12 +4,11 @@ using System.Text;
 
 namespace Cleaning_Bot_Conversion.Navigation
 {
-    public enum TileType
+    public enum TileSide
     {
-        Obstacle = -1,
-        High = 3,
-        Low = 2,
-        Bare = 1,
-        Unknown = 3
+        WALL,
+        DOOR_OPEN,
+        DOOR_CLOSED,
+        PASSABLE
     }
 }

@@ -5,7 +5,7 @@ using Cleaning_Bot_Conversion.Navigation;
 
 namespace Cleaning_Bot_Conversion.Sensors
 {
-    class Sensors : ISensorPackage
+    public class Sensor : ISensorPackage
     {
         public void CleanTile(Coordinates target)
         {
