@@ -26,7 +26,7 @@ namespace Cleaning_Bot_Conversion.Robotics
         }
 
         /**
-         * incriment the battery capacity and return whether batter ins at capacity
+         * incriment the battery capacity and return whether batter is at capacity
          */
         public void IncrimentBattery(float delta) => Battery += delta;
 

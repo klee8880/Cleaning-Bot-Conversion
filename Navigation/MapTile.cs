@@ -21,6 +21,7 @@ namespace Cleaning_Bot_Conversion.Navigation
         }
         public int DirtVal;
 
+        //Constructors
         public MapTile(int dirt, TileType tType, Coordinates coords)
         {
             DirtVal = dirt;
@@ -59,14 +60,34 @@ namespace Cleaning_Bot_Conversion.Navigation
             WestSide = wS;
         }
 
+        //Functions
         public void RemoveDirt(Coordinates coords)
         {
-            throw new NotImplementedException();
+            DirtVal = 0;
         }
 
         public bool HasObstacle(Direction dir)
         {
-            throw new NotImplementedException();
+            TileSide side;
+
+            switch (dir)
+            {
+                case Direction.North:
+                    side = this.NorthSide;
+                case Direction.East:
+                    side = this.EastSide;
+                case Direction.South:
+                    side = this.SouthSide;
+                case Direction.West
+                    side = this.WestSide;
+                default:
+                    throw new Exception("Unsupported direction indicator given");
+            }
+
+            if (side == TileSide.DOOR_OPEN || side == TileSide.PASSABLE) 
+                return true;
+            else 
+                return false;
         }
     }
 }
