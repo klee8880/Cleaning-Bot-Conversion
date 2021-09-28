@@ -84,10 +84,8 @@ namespace Cleaning_Bot_Conversion.Navigation
                     throw new Exception("Unsupported direction indicator given");
             }
 
-            if (side == TileSide.DOOR_OPEN || side == TileSide.PASSABLE) 
-                return true;
-            else 
-                return false;
+            return side == TileSide.DOOR_OPEN || side == TileSide.PASSABLE 
+            
         }
     }
 }
